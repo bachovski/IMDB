@@ -15,7 +15,7 @@ $genre = $stmt->fetch();
 <h2>Uredi žanr</h2>
 
 <form action="genre_update.php" method="post">
-    <input type="hidden" name="id" values="";
+    <input type="hidden" name="id" value="<?php echo $genre['id'];?>";
     <input type="text" <?php echo $genre['title']; ?> name="title" placeholder="Vnesi ime žanra" class="form-control" required="required" /><br />
     <input type="text" <?php echo $genre['short']; ?> name="short" placeholder="Vnesi kratico žanra" class="form-control" /><br />
     <input type="submit" value="Shrani" class= "btn btn-primary" />
